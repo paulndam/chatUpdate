@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-function App() {
+import Join from './components/Join.js';
+import Chat from './components/Chat.js';
+// import UsersOnline from "./components/UsersOnline.js";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* when user join they will go thru this route and then later on send the to the chat route */}
+      <Route path="/" exact component={Join} />
+      <Route path="/chat" component={Chat} />
+      {/* <Route path="/usersonline" component={UsersOnline} /> */}
+    </Router>
   );
-}
+};
 
 export default App;

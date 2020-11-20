@@ -1,0 +1,36 @@
+/** @format */
+
+.containeroutside {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #87cfdf;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #ffffff;
+	border-radius: 8px;
+	height: 60%;
+	width: 35%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+	.container-fluid {
+		height: 100%;
+	}
+
+	.container {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+	.container {
+		width: 60%;
+	}
+}
